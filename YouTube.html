@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bcc0f3e22b.js" crossorigin="anonymous"></script>
+    <title>YouTube</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+     
+        header{
+            /*border: 1px solid black;*/
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            
+        }
+        header:hover{
+            cursor: pointer;
+
+        }
+        .state-bar{
+            /*border: 1px solid red;*/
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;   
+        }
+        .center{
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius:25px;
+
+            
+            /* width: 400px;
+            border-radius: 20px; */
+           
+            
+        }
+         input{
+            width: 400px;
+            height: 40px;
+            border: none;
+            text-align: left;
+
+        
+            
+        }
+        /* input placeholder{
+           
+            border: none; 
+        
+        }*/
+        .fa-solid{
+            content:none;
+        }
+        .right{
+          /*  border: 1px solid blue;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        #create{
+            padding: 0 10px;
+        }
+        .right img{
+            width: 30px;
+            border-radius: 60px;
+        }
+        button{
+            border: 1px solid black;
+            background-color: white;
+            font-size: 23px;
+            width:75px;
+            height: 50px;
+            border-radius: 22px;
+            text-align: left;
+            border: none;  
+        }
+        
+        header .right:hover{
+            cursor: pointer;
+
+        } 
+        .create:hover{
+            cursor: pointer;
+        }
+        header img{
+            width: 50px;  
+        }
+        .button-click{
+           border: 1px solid black;
+            border-radius: 20px;
+            cursor: pointer;    
+        }
+        #list-items{
+          /* border: 1px solid black;*/
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            font-size: 22px;
+            top: 50px;
+            right: 0;   
+        }
+        a{
+            border: 1px solid black;
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 5px;
+            color: black;
+            justify-content:right;
+            border-color: white;
+            position: relative;
+            justify-content: space-between;      
+        }
+        a:hover{
+            cursor: pointer;
+            background-color: lightgray;
+        }
+        .top-icon{
+           /*border: 1px solid yellow;*/
+            display: flex;
+            flex-direction: column;  
+            width: fit-content;
+        }
+       .top-icon img{
+                 width:20px;
+       }
+       #phone{
+        border: 1px solid black;
+        margin-right: 500px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-color: white;
+       }
+       
+       #main-video{
+       border: 1px solid black;
+      
+       }
+       #video-frame{
+        /*border: 1px solid red;*/
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+
+        
+       }
+       #video-frame img{
+        width: 150px;
+        height: 100px;
+
+       }
+       main{
+    background-color: white;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="state-bar">
+        <i class="fa-solid fa-bars"></i>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png" alt="">
+        <a href="">YouTube<sup>IN</sup></a>
+
+        </div>
+        <div class="center">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Seach" id="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <span id="phone">
+       <i class="fa-solid fa-microphone"></i>
+        </span>
+        <div class="right">
+            <div  class="button-click">
+         <i class="fa-solid fa-plus"></i>
+       <a d="create" href="">create</a>
+        </div>
+        <i class="fa-regular fa-bell"></i>
+        <img src="https://yt3.ggpht.com/ytc/AIdro_mp5BHtWA80vQXe5GQGGJC5HSAgwawTY449G435D_WqweF5fNSBjGscoCuzbxwx91FdyA=s88-c-k-c0x00ffffff-no-rj" alt="">
+        </div>
+
+    </header>
+    <main>
+         <div class="top-icon">
+            <a href=""><i class="fa-solid fa-house"></i></a>
+            <a href=""><img src="https://img.icons8.com/?size=100&id=h5l3jZXManlM&format=png&color=000000" alt=""></a>
+            <a href="">Sub</a>
+            <a href=""><i class="fa-solid fa-circle-user"></i></a>
+        </div>
+        <div id="list-items" class="list">
+            <a href="">All</a>
+            <a href="">Music</a>
+            <a href="">Tamil Cinema</a>
+            <a href="">Mixes</a>
+            <a href="">News</a>
+            <a href="">Podcast</a>
+            <a href="">Gaming</a>
+            <a href="">Webseries</a>
+            <a href="">Live</a>
+           <a href="">APIs</a> 
+            <a href="">Satire</a>
+            <a href="">Skills</a>
+            <a href="">Gadgets</a>
+            <a href="">AI</a>   
+            <a href="">APIs</a> 
+            <a href="">Satire</a>
+            <a href="">Skills</a>
+            <a href="">Satire</a>
+            <a href="">Skills</a>
+            <a href="">Music</a>
+            <a href="">Mixes</a>
+        </div>
+         <div id="main-video" class="video-in">
+        <div id="video-frame">
+             <img src="https://i.ytimg.com/vi/2EsK12prphM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLDMtrbYW8BwoLb5vfBD14pwye6yog" alt="">
+              <a href="">அவரு யாருனு தெரியுமா ? அவரு எப்படிப்பட்ட ஆளுன்னு தெரியுமா Fahhh!!!</a>
+        </div>
+       </div>
+
+    </main>
+
+    
+</body>
+</html>

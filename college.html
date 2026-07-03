@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bcc0f3e22b.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .top-bar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #27205f;
+            color: white;
+            
+        }
+        .link-bar {
+         word-spacing: 30px;
+         text-decoration: none;
+        }
+        .link-bar a:hover{
+          cursor:pointer;
+          text-decoration: underline;
+        }
+        .number{
+        word-spacing: 50px;
+        background-color: #26AF60;
+       }
+
+       /*  DropDown COntents */
+       .top-header .dropdown{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 30px;
+        padding: 0 10px;
+        border-color: black;
+        z-index: 100;
+
+       }
+       /* .left{
+        background: #fff;
+        
+       } */
+       .right .drodown{
+         display: flex;
+         
+
+       }
+       .top-header .dropdown{
+        display: inline-block;    
+        position: relative;
+       
+       }
+       .dropbtn{
+       padding: 12px 10px;
+       font-size: 12px;
+       border: none;
+       background: none;
+       color: white;
+       }
+       .dropdown-content a:hover{
+        cursor: pointer;
+       
+
+       }
+       .dropdown-content{
+            display: none;
+            position: absolute;
+            background: none;
+            background-color: white;
+          
+       }
+       .dropdown-content a:hover{
+        cursor: pointer;
+        text-decoration-line: underline;
+        
+       }
+       .dropdown-content a{
+         padding: 5px 10px;
+        display: block;
+        color: black;
+        gap: 30px;
+        text-decoration: none;
+        background-color: white;
+        
+        
+
+       }
+       .dropdown:hover .dropdown-content{
+        display: block;
+        text-decoration: none;
+       }
+      .top-bar .link-bar a{
+        text-decoration: none;
+        color: white;
+        font-size: 14px;        
+        gap: 50px;
+        
+      }
+      header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        list-style: none ;
+        gap: 200px;
+        z-index: 10;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+     
+      .right-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+      }
+      .menu-list{
+        /* border: 1px solid black; */
+        position: relative;
+        display: inline-block;
+        font-size: 16px;
+        justify-content: space-between;
+      }
+      .menu-list:hover{
+        cursor: pointer;
+      }
+      
+      .drop-menubars {
+        color: white;
+        padding: 12px 10px;
+        font-size: 16 px;
+        border: none;
+        
+
+      }
+      .sub-menu-item{
+        display: none;
+        position: absolute;
+        z-index: 10;
+      }
+      .sub-menu-item a{
+        padding: 10px 16px;
+        text-decoration: underline;
+        display: block;
+        color: black;
+        text-decoration: underline;
+        background-color: white;
+        border-bottom-color: #27205f;
+
+      }
+      .sub-menu-item a:hover{
+        cursor: pointer;
+        background-color: white;
+        text-decoration: dashed;
+      }
+       .drop-menubars:hover .sub-menu-item{
+        display: block;
+       }
+       .right-menu button{
+        background-color: white;
+        border: none;
+        display: flex;
+        margin-right: 10px;
+       }
+       .word-btn p{
+         font-family: Roboto;
+         z-index: 11;
+         width: 675px;
+         padding: 0px;
+         background: transparent;
+         
+         
+         
+       }
+       #out-word {
+        font-size: 50px;
+        min-width: 200px;
+        font-family: Roboto;
+        bottom: 25px;
+        color: white;
+        
+       }
+    .word-btn p{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: absolute;
+       top: 400px;
+       font-weight: bold;
+       line-height: 1.9;
+       font-size: 24px; 
+       border-bottom: 2px;
+       margin-bottom: 15px;
+       padding: 30px;
+       font-family: Lato;
+    } 
+    /* Overall the main Container box */
+    .container-box{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+    }
+    .image-bar{
+      position: absolute;
+      display: inline-block;
+      top: 120px;
+      left: 50px;
+      transform: translate(-35%,-35%);
+      height: 5px;
+      bottom: 80px;
+      z-index: 10 ;
+    }
+    .image-bar img{
+       position: absolute;
+      top: 290px;
+      left: 80px;
+      transform: translate(-46%,-46%);
+      height: 600px;
+      bottom: 50px;
+
+     
+   
+ 
+    }
+    .word-btn p:hover{
+      cursor: pointer;
+    }
+    .bgk-image img{
+      position: relative;
+       width: 1500px;
+       height: auto;
+      display: block;
+
+    }
+    .btn-click{
+      position: absolute;
+       top: 110%;
+      left: 10%;
+      opacity: 1;
+      background: transparent;
+      transform: translate(-10%,-10%);
+      border: none ;
+      z-index: 100;
+      word-spacing: 30px;
+      /* display: flex;
+      justify-content: space-between; */
+     /* font-size: 0;
+      -ms-transform: translate(-50%,50%);
+      padding: 12px 10px;
+      top: 700px;
+      left: 50px;
+      visibility: visible;
+       */
+    }
+#aa-btn{
+     border-radius: 5px;
+     font-size: 16px;
+     background: transparent;
+     border-color: white;  
+     color: white;
+    border-spacing: 10px;
+    /* width: 204px; */
+    height: 40px;
+    text-align: center;
+    border-style: solid;
+    letter-spacing: 0px;
+
+
+     }
+     #cu-btn{
+      border-radius: 5px;
+      font-size: 16px;
+      background: transparent;
+      color: white;
+      border-color: white;
+      border-spacing: 10px;
+    /* width: 204px; */
+    height: 40px;
+    text-align: center;
+    /* border-style: solid; */
+    letter-spacing: 0px;
+   
+     }
+     #cu-btn:hover{
+      cursor: pointer;
+     }
+     #aa-btn{
+      border-radius: 5px;
+      background: transparent;
+      color: white;
+      border-color: white;
+     }
+      #aa-btn:hover{
+        cursor: pointer;
+      }
+      .bgk-image{
+      background-repeat: no-repeat;
+
+      }
+      .heading-an{
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: row;
+        padding: 0px 40px;
+        justify-content: left;
+        align-items: center;
+        padding: 50px;
+      }
+      .heading-an .an_bgk{
+       position: absolute;
+       width: 180px;
+       
+       
+
+      }
+      .heading-an h6{
+        color:  #fff;;
+        z-index: 10;
+        left: 10px;
+      }
+
+      .heading-an img{
+        width: 50px;
+        
+      }
+    
+      #msg_body{
+        position: relative;
+        border: 1px solid red;
+       
+         left: 30px;
+        margin-bottom: 60px;
+        margin-top: 50px;
+        border-top-style: solid;
+        border-right-width: 1px;
+      }
+      #event-ltr{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        color:  #312e80;
+      }
+      .foot-add a{
+        
+        text-decoration: none;
+        padding: 20px;
+        color: black;
+        width: fit-content;
+        display: inline-block;
+        position:absolute;
+  
+  
+      }
+      .foot-add a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        color: #26AF60;
+      }
+      .container-low{
+        padding: 150px;
+        background-color: lightgray;
+      }
+      .events-head{
+         height: 300px;
+         background-color: #27205f;
+         margin: 10px;
+      }
+     main .events-head{
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+     }
+     .awards-bar h3{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      font-size: 25px;
+      color: #27205f;
+      
+     }
+      .awards-bar .NBA-img{
+        max-width: 150px;
+        height: 200px;
+        vertical-align: top;
+        justify-content:space-between;
+        align-items: center;
+     }
+     
+
+     
+      
+        
+    
+     
+     
+     
+
+      
+  
+
+      
+    
+
+      
+      
+
+
+    </style>
+</head>
+<body>
+    <nav class="top-bar">
+        <div class="left">
+        <div class="code">Counselling Code <span class="number">2634</span></div>
+        </div>
+        <div class="right">
+        <div class="top-header">
+            <div class="dropdown">
+                <button class="dropbtn"> Accrediation and Ranking 
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                 <div class="dropdown-content">
+                    <a href="#">IQAC</a>
+                    <a href="#">NBA</a>
+                    <a href="#">NAAC</a>
+                    <a href="#">ASHE</a>
+                    <a href="#">UGC-2F and 12B</a>
+                    <a href="#">Automous</a>
+                    <a href="#">ARIIA</a>
+                 </div>
+                  </div>
+                  <div class="dropdown">
+                <button class="dropbtn">TEDD 
+                    <i class="fa fa-caret-down"></i>  
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Idea Initation</a>
+                    <a href="#">P & D</a>
+                    <a href="#">R & D</a>
+                    <a href="#">EDC</a>
+                    <a href="#">IIC</a>
+                    <a href="#">Excel TBI</a>
+                     </div>
+                      </div> 
+                <div class="dropdown">
+                <button class="dropbtn">Media Resource
+                    <i class="fa fa-caret-down"></i> 
+                </button>
+                 <div class="dropdown-content">
+                    <a href="#">Press Release</a>
+                    <a href="#">Event Gallary</a>
+                 </div> 
+                  </div>
+                <div class="dropdown">
+                <button class="dropbtn">Portal Login
+                    <i class="fa fa-caret-down"></i> 
+                </button>
+                 <div class="dropdown-content">
+                    <a href="#">Alumini</a>
+                    <a href="#">COE</a>
+                    <a href="#">Smart Hostal</a>
+                 </div>
+                  </div>
+                  <div class="dropdown">
+                <button class="dropbtn">Approvals
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                 <div class="dropdown-content">
+                    <a href="#">AICTE</a>
+                    <a href="#">Anna University</a>
+                    <a href="#">Permanent Afflication</a>
+                 </div>
+                  </div>
+                  <div class="dropdown">
+                <button class="dropbtn">Nominees
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Acadamic Council</a>
+                    <a href="#">Result Passing Board</a>
+                    <a href="#">Finace Committee</a>
+                    <a href="#">Govering Council Nominee</a>
+                 </div>
+                  </div>
+                </div>
+            </div>
+                <div class="link-bar">
+                <a href="#">Madatory Diclosure</a>
+                <a href="#">NIRF</a>
+                <a href="#">IDEALAB</a>
+                <a href="#">ContactUs</a>
+                </div>
+    </nav>
+   <header>
+     <div class="left-side">
+        <div class="logo-on">
+        <a href="">
+        <img src="images/logo_engg.png" alt=""></a>
+        </div>
+     </div>
+     <div class="right-menu">
+        <button class="menu-list">About Us
+           <span><i class="fa-solid fa-angle-down"></i></span></button>
+        <div class="drop-menubars">
+            <div class="sub-menu-item">
+                  <a href="#">About the Instution</a>
+                  <a href="#">Adminstration</a>
+                  <a href="#">Govering Body & Acadamic Council</a>
+                  <a href="#">Awards and Achivements</a>
+                    
+                
+         </div>
+       </div>
+        
+        <button class="menu-list">Admissions 
+          <span><i class="fa-solid fa-angle-down"></i></span></button>
+        <div class="drop-menubars">
+          <div class="sub-menu-item">
+                    <a href="">Eligility</a>
+                    <a href="">Admission Procedure</a>
+                    <a href="">ScholarShip</a>   
+          </div>
+        </div>
+        <button class="menu-list">Academics 
+          <span><i class="fa-solid fa-angle-down"></i></span></button>
+        <div class="drop-menubars">
+          <div class="sub-menu-item">
+                    <a href="">Engineering</a>
+                    <a href="">Mangement Studies</a>
+                    <a href="">Computer Application</a>
+         </div>
+          
+        </div>
+        <button class="menu-list">facilities 
+          <span><i class="fa-solid fa-angle-down"></i></span></button>
+        <div class="drop-menubars">
+          <div class="sub-menu-item">
+                    <a href="">Clubs & Societies</a>
+                    <a href="">Adminstration</a>
+                    <a href="">Govering Body & Acadamic Council</a>
+                    <a href="">Awards and Achivements</a>
+                
+         </div>
+          
+        </div>
+        <button class="menu-list">Placement & Traning
+          <span><i class="fa-solid fa-angle-down"></i></span></button>
+        <div class="drop-menubars">
+          <div class="sub-menu-item">
+                    <a href="">About Placement</a>
+                    <a href="">Recrutier</a>
+                    <a href="">Taraning Module</a>
+                    <a href="">Placement Team</a>
+                    <a href="">placemnt statistics</a>
+                    <a href="">Placement Gallary</a>
+                    <a href="">Contact us</a>
+               
+         </div>
+        </div>
+        <button class="menu-list">Education
+          <span><i class="fa-solid fa-angle-down"></i></span></button>
+        <div class="drop-menubars">
+          <div class="sub-menu-item">
+                    <a href="">About COE</a>
+                    <a href="">Notification / circulers</a>
+         </div>
+        </div>
+     </div>
+     </div>
+   </header>
+   <main>
+      <div class="container-box">
+    <div class="bgk-image">
+            <img src="images/engg-collg.jpg" alt="">
+           </div>
+        <div class="image-bar">
+          <img class="plain-image" src="https://excelinstitutions.com/excel_engg/wp-content/uploads/2021/01/Rectangle-60.png" alt="">
+          </div>
+          <div class="ltr-btn">
+          <div class="word-btn">
+           <p id="out-word">Outstanding Academic 
+            Support Tailored to Real 
+              World Situations</p>
+          </div>
+          <div class="btn-click">
+           <button id="aa-btn">APPLY FOR ADMISSION</button>
+           <button id="cu-btn">CHAT WITH US</button>
+           </div>
+           </div>
+           </div>
+           <br>
+           <div class="heading-an">
+            <img src="images/announcement.png" alt="">
+            <img class="an_bgk" src="images/An_background.png" alt="">
+            <h6>Our latest<br>
+              Latest Announcement</h6>
+              <span id="msg_body">Admissions Open for Academic Year 2026-27 </span>
+            </div>
+            <div class="event-up">
+               <span id="event-ltr" ><h3>UpComing Events</h3></span>
+               
+                </div>
+                   <div class="events-head">
+                    <div id="events-1"></div>
+                    <div id="event-2"></div>
+                    <div id="event-3"></div>
+            </div>
+            <div class="awards-bar">
+              <h3>Our Awards&Accredutations</h3>
+              <img src="images/NAACawards1-1.png" alt="">
+              <img class="NBA-img" src="images/NEW-NBA-LOGO-1.png" alt="">
+              <img src="images/ANEGroup-203.png" alt="">
+              <img src="images/UGCGroup-202.png" alt="">
+              <img src="images/AUGroup-201.png" alt="">
+              <img src="images/ISTEGroup-200.png" alt="">
+              <img src="images/UGC AcadamyGroup-202.png" alt="">
+            </div>
+                <div class="aliumi-test">
+                   <h6>ALUMI TESTIMONIALS</h6>
+                   <h3>How our services bring about success</h3>
+              
+                </div>
+              
+           
+        
+   </main>
+   <footer>
+      <div class="container-low">
+        <div class="left-foot">
+           <a href="#"><img src="images/logo_engg.png" alt=""></a>
+            </div>
+           <div class="address-bar">
+             <address>NH-544, Salem Main Road, 
+              <br>
+              Sankari West, Pallakkapalayam, Pin:637 303.
+              <br>
+               Komarapalayam Namakkal Dt. 
+               <br>
+               Tamilnadu.
+             </address>
+             </div>
+             <div class="foot-add">
+             <span><a href="">
+              <img src="" alt="">
+              <h3>GetDirections</h3></a></span>
+             <span><a href=""><h3>9965523999</h3></a></span>
+             <span><a href=""><h3>info@excelcollege.com</h3></a></span>
+             </div>
+                <!-- <div class="head-links">
+               <h4>Quick Links</h4>
+               </div>
+               <div class="aik-links">
+               <a href="#">UGC</a>
+               <a href="#">AICTE</a>
+               <a href="#">NPTEL</a>
+               <a href="#">NBA</a>
+               <a href="#">NAAC</a>
+               <a href="#">DOTE</a>
+               <a href="#">Anti Ragging</a>
+               <a href="#">Anna University</a>
+               <a href="#">FeedBack</a>
+               <a href="#">Audit Statement</a>
+               <a href="#">Service Rulse</a>
+               <a href="#">Student Code of Conduct</a>
+               <a href="#">Faculty List</a>
+             </div>
+             <div class="other-lk">
+              <h4>Other Links</h4> -->
+              
+              
+             </div>
+          
+
+        
+      </div>
+   </footer>
+
+    
+</body>
+</html>

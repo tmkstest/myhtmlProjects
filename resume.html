@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            /*border: 1px solid blue;*/
+            height: 100vh;
+            /*viewport height*/
+             width: 65vw;
+            margin: auto;
+            display: grid;
+            grid-template-columns:1fr 2fr;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        }
+        .left{
+           /* border: 1px solid green;*/
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between ;
+            padding: 25px;
+            background-color: rgb(26, 95, 134);
+            color: white;
+
+        }
+        .profile-img{
+            /* border: 1px solid  red;*/
+             display: flex;
+             justify-content: center;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            border: 1px solid ;
+            border-radius: 50%;
+        }
+        .right{
+            /*border: 1px solid red;*/
+            display: flex;
+            flex-direction: column;
+           justify-content: space-evenly;
+           padding: 25px 15px;
+             
+        }
+        body{
+           /* border: 1px solid red;*/
+            height: 200px;     
+      }
+      ul{
+       /* border: 1px solid red;*/
+       padding-left: 25px;
+      }
+      table,th ,td  {
+        border: 1px solid ;
+        border-collapse: collapse;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="left">
+            <div class="profile-img">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDTDjN8DxcZ5B3ZAomMMggHuAlx_cO8zDXOw&s" 
+             alt="Profile Image">
+            </div>
+         <h3>contact</h3>
+        <hr>
+          <p>Chennai,India</p>
+          <p>vicmeuthu@gmail.com</p>
+          <p>contact:9445913699</p>
+        <h3>Skils</h3>
+        <hr>
+        <ul>
+            <li>Java Fullstack</li>
+            <li>Selenium Testing</li>
+            <li>English Higher Typing</li>
+            <li>Excel</li>
+        </ul>
+        <h3>Strengths</h3>
+        <hr>
+        <ul>
+            <li>Good Communication skills</li>
+            <li>focused and confident on attitude </li>
+            <li>Good team player</li>
+            <li>self learning and self motivated</li>
+        </ul>
+        <h3>Languages</h3>
+        <hr>
+        <ul>
+            <li>Tamil</li>
+            <li>English</li>
+            <li>Hindi</li>
+        </ul>
+        </div>
+        <div class="right">
+            <h1>Muthukumarasamy Thangavel</h1>
+            <h2>CAREER OBJECTIVE</h2>
+            <hr>
+            <p>o become a successful professional and to work in an organization where my knowledge can be shared and utilized and my creative skills can be brought out in the best of that organization.</p>
+            <h2>Personal Details</h2>
+            <hr>
+            <ul>
+                <li>Name: Muthukumarasamy Thangavel</li>
+                <li>mobile No:9445913699</li>
+                <li>hoppies</li>
+                <ul>
+                    <li>Reading</li>
+                    <li>writting</li>
+                    <li>swimming</li>
+                </ul>
+            </ul>
+            <h2>ACADEMIC QUALIFICATION</h2>
+            <hr>
+            <table>
+                <thead>
+                    <tr>
+                <th>Board/university</th>
+                <th>School/College</th>
+                <th>Year Of Passing</th>
+                <th>Marks</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MBA</td>
+                        <td>UNIVERSITY NAME</td>
+                        <td>2015</td>
+                        <td>85%</td>
+                    </tr>
+                       <tr>
+                        <td>MBA</td>
+                        <td>UNIVERSITY NAME</td>
+                        <td>2015</td>
+                        <td>85%</td>
+                    </tr>
+                       <tr>
+                        <td>MBA</td>
+                        <td>UNIVERSITY NAME</td>
+                        <td>2015</td>
+                        <td>85%</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</body>
+</html>

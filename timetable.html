@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTable</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+           /* border: 1px solid red;*/
+            background-color: rgb(29, 211, 211);
+            color: white;
+        }
+        table,th ,td {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 25px;
+            margin: 50px;
+        }
+        th{
+            baseline-shift: middle;
+            background-color: rgb(96, 133, 189);
+            color: white;
+            text-align: center;
+            height: 10vh;
+            width: 30vw;
+        }
+        tr{
+            text-align: center;
+        }
+        .examination{
+            text-align: left;
+            padding-left: 20px;
+           border-spacing: 100px;
+        }
+        .timetable{
+            display: flex;
+            justify-content: center;
+        }
+        h2{
+            text-align: end;
+            padding-right: 50px;
+            color: rgb(80, 112, 211);
+
+        }
+        .shead{
+            width: 5vw;
+        }
+
+    </style>
+</head>
+<body>
+     <h1>Annual Planner - 2026</h1>
+      <h2>Publication Date : 03.12.2025</h2>
+     <div id="timetable">
+    <table>
+        <tr>
+        <th class="shead">S.No</th>
+        <th>Examnination</th>
+        <th>Notification Date </th>
+        <th>Examnination Date</th>
+        <th>No. of Days of Examination</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td class="examination">Combined Technical Services Examination (Non-Interview Posts)</td>
+                <td>20.05.2026</td>
+                <td>03.08.2026 </td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="examination">Combined Civil Services Examination – I (Group I Services) </td>
+                <td>23.06.2026</td>
+                <td>06.09.2026 </td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="examination">Combined Technical Services Examination (Diploma / ITI Level)</td>
+                <td>07.07.2026</td>
+                <td>20.09.2026</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="examination">Combined Civil Services Examination – II (Group II and IIA Services) </td>
+                <td>11.08.2026</td>
+                <td>25.10.2026 </td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="examination"> 	Combined Technical Services Examination (Interview Posts)</td>
+                <td>31.08.2026</td>
+                <td>14.11.2026</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class="examination">Combined Civil Services Examination – IV (Group IV Services) </td>
+                <td>06.10.2026</td>
+                <td>20.12.2026</td>
+                <td>1</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+    
+</body>
+</html>
